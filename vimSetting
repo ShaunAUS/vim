@@ -1,0 +1,119 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+Plug 'preservim/nerdtree'
+Plug 'psliwka/vim-smoothie'
+Plug 'machakann/vim-highlightedyank'
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+let mapleader = ","
+" easymotion set
+map <leader>w <Plug>(easymotion-w)
+map <leader>b <Plug>(easymotion-b)
+map <leader>e <Plug>(easymotion-bd-e)
+map <leader>s <Plug>(easymotion-s)
+" multi cursor set
+map <C-N>  <A-N>
+map <C-P>  <A-P>
+map <C-X>  <A-X>
+map g<C-N> g<A-N>
+" Do incremental searching.
+set keep-english-in-normal
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set easymotion
+set relativenumber
+set number
+set NERDTree
+set surround
+set commentary
+set multiple-cursors
+set visualbell
+set noerrorbells
+
+" ; set
+" nnoremap ; :
+" vnoremap ; :
+
+" select configuration
+nnoremap <leader>d vi"
+nnoremap <leader>r vi(
+nnoremap <leader>R vi{
+nnoremap <leader>t va(
+nnoremap <leader>T va{
+nnoremap <leader>v viw
+
+" move cursor
+nnoremap <leader>a ^
+nnoremap <leader>f $
+vnoremap <leader>a ^
+vnoremap <leader>f $
+
+" delete and cut set
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+xnoremap p "_dP
+
+" cancel find result
+nnoremap <leader>c :nohlsearch<CR>
+
+" Go to tab by number
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+nnoremap <tab> gt
+nnoremap <S-tab> gT
+nnoremap <leader>Q :action CloseAllEditors<CR>
+nnoremap <leader>q :action CloseContent<CR>
+nnoremap <leader>G :action CloseAllEditorsButActive<CR>
+nnoremap <leader>g :action SaveAll<CR> :action CloseContent<CR>
+
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
+imap <S-Up> <Esc>v<Up>
+imap <S-Down> <Esc>v<Down>
+imap <S-Left> <Esc>v<Left>
+imap <S-Right> <Esc>v<Right>```
+
+
+" 리로드, 복사, 붙여넣기
+set clipboard+=unnamed
+set clipboard+=ideaput
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :source ~/.ideavimrc<CR>
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+set ideajoin
