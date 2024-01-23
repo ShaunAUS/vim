@@ -64,6 +64,16 @@ xnoremap p "_dP
 " cancel find result
 nnoremap <leader>c :nohlsearch<CR>
 
+" split window
+nnoremap <M-1> :vs<CR>
+nnoremap <M-2> :sp<CR>
+
+" move cursor when window is split
+nnoremap <D-J> <C-W>h
+nnoremap <D-K> <C-W>l
+nnoremap <C-K> <C-W>k
+nnoremap <C-J> <C-W>j
+
 " Go to tab by number
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
