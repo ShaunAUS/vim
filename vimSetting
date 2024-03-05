@@ -116,10 +116,10 @@ nnoremap [e :action GotoNextError<cr>
 nnoremap ]e :action GotoPreviousError<cr>
 
 map \r <action>(ReformatCode)
-map \t <action>(RunClass)
-map \d <action>(Debug)
-map \s <action>(Stop)
-map \b <action>(ToggleLineBreakpoint)
+map qr <action>(RunClass)
+map qd <action>(Debug)
+map qs <action>(Stop)
+map qb <action>(ToggleLineBreakpoint)
 map \f :NERDTreeFind<cr>
 
 
