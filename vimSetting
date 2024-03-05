@@ -111,6 +111,19 @@ set clipboard+=ideaput
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :source ~/.ideavimrc<CR>
 
+""" 에러 위치 이동 -----------------------------
+nnoremap [e :action GotoNextError<cr>
+nnoremap ]e :action GotoPreviousError<cr>
+
+map \r <action>(ReformatCode)
+map \t <action>(RunClass)
+map \d <action>(Debug)
+map \s <action>(Stop)
+map \b <action>(ToggleLineBreakpoint)
+map \f :NERDTreeFind<cr>
+
+
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
