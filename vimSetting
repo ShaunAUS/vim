@@ -115,12 +115,22 @@ nnoremap \r :source ~/.ideavimrc<CR>
 nnoremap [e :action GotoNextError<cr>
 nnoremap ]e :action GotoPreviousError<cr>
 
-map \r <action>(ReformatCode)
+map qr <action>(ReformatCode)
 map qr <action>(RunClass)
 map qd <action>(Debug)
 map qs <action>(Stop)
 map qb <action>(ToggleLineBreakpoint)
-map \f :NERDTreeFind<cr>
+map qf :NERDTreeFind<cr>
+
+
+""" 탭 이동
+vnoremap n <gv
+vnoremap . >gv
+
+
+
+""" run 선택
+map qe <action>(RunConfiguration)
 
 
 
