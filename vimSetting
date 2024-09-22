@@ -115,6 +115,10 @@ nnoremap \r :source ~/.ideavimrc<CR>
 nnoremap [e :action GotoNextError<cr>
 nnoremap ]e :action GotoPreviousError<cr>
 
+" Refactor -> Rename 명령어를 Shift + R에 매핑
+map <S-R> <action>(RenameElement)
+
+
 map qr <action>(ReformatCode)
 map qr <action>(RunClass)
 map qd <action>(Debug)
