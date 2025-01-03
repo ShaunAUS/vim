@@ -154,6 +154,25 @@ map Q gq
 
 " Find more examples here: https://jb.gg/share-ideavimrc
 set ideajoin
-" 저장된 위치로 이동"
-nnoremap qa mA
+
+
+
+" Variable to track mark state (0 = not set, 1 = set)
+let g:mark_a_state = 0
+
+" Toggle mark A function for IdeaVim
+function! ToggleMarkA()
+    if g:mark_a_state == 0
+        normal! mA
+        let g:mark_a_state = 1
+        echo "Mark 'A' set"
+    else
+        delmarks A
+        let g:mark_a_state = 0
+        echo "Mark 'A' deleted"
+    endif
+endfunction
+
+" Mark mappings
+nnoremap qq :call ToggleMarkA()<CR>
 nnoremap aa `A
