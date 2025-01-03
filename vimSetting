@@ -165,11 +165,9 @@ function! ToggleMarkA()
     if g:mark_a_state == 0
         normal! mA
         let g:mark_a_state = 1
-        echo "Mark 'A' set"
     else
         delmarks A
         let g:mark_a_state = 0
-        echo "Mark 'A' deleted"
     endif
 endfunction
 
