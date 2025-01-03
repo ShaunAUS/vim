@@ -154,3 +154,6 @@ map Q gq
 
 " Find more examples here: https://jb.gg/share-ideavimrc
 set ideajoin
+" 저장된 위치로 이동"
+nnoremap qa mA
+nnoremap aa `A
